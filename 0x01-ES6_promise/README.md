@@ -9,3 +9,12 @@ Promises in JavaScript provide a way to handle asynchronous operations. They all
 - rejected: The promise has been rejected and the reason for rejection is available.
 
 #### Promises are created using the Promise constructor, which takes a single argument: a function called the executor. The executor function takes two arguments: a resolve function and a reject function.
+
+Once a promise is created, you can use the then method to handle the fulfilled state and the catch method to handle the rejected state.
+
+```
+    promise
+   .then(value => console.log(value))
+   .catch(error => console.log(error));
+
+```
