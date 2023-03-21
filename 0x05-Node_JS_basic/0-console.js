@@ -6,7 +6,7 @@
  */
 
 const displayMessage = (s) => {
-  console.log(s)
+  console.log(s);
 };
 
 module.exports = displayMessage;
