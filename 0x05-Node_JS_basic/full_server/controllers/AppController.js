@@ -1,16 +1,11 @@
-import AppController from '../controllers/AppController';
-import StudentsController from '../controllers/StudentsController';
-
 /**
- * Binds the routes to the appropriate handler in the
- * given Express application.
- * @param {Express} app The Express application.
+ * Contains the miscellaneous route handlers.
  */
-const mapRoutes = (app) => {
-  app.get('/', AppController.getHomepage);
-  app.get('/students', StudentsController.getAllStudents);
-  app.get('/students/:major', StudentsController.getAllStudentsByMajor);
-};
+class AppController {
+  static getHomepage(request, response) {
+    response.status(200).send('Hello Holberton School!');
+  }
+}
 
-export default mapRoutes;
-module.exports = mapRoutes;
+export default AppController;
+module.exports = AppController;
