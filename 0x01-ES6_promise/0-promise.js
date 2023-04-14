@@ -1,5 +1,10 @@
 export default function getResponseFromAPI () {
+  const num = Math.random() * 10;
   return new Promise((resolve, reject) => {
-    resolve('promise is kept');
+    if (num > 5) {
+      resolve('promise is kept');
+    } else {
+      reject(new Error("I can't"));
+    }
   });
 }
